@@ -8,17 +8,22 @@
 
 	// Normalize anchors on the page (and on future mutations)
 	function stripHtmlExtensionInAnchors(root){
-		var anchors = (root||document).querySelectorAll('a[href$=".html"]');
+		var scope = root || document;
+		var anchors = scope.querySelectorAll('a[href$=".html"]');
 		anchors.forEach(function(a){
 			try{
-				var u = new URL(a.href, location.href);
+				// skip if already processed
+				if(a.dataset.hrefWithExt) return;
+				var u = new URL(a.getAttribute('href'), location.href);
 				// only process same-origin links
 				if(u.origin !== location.origin) return;
 				// remove .html extension but keep query/hash
 				u.pathname = u.pathname.replace(/\.html$/,'');
-				a.setAttribute('data-href-with-ext', a.getAttribute('href'));
-				a.href = u.pathname + u.search + u.hash;
-			}catch(e){}
+				a.dataset.hrefWithExt = a.getAttribute('href');
+				a.setAttribute('href', u.pathname + u.search + u.hash);
+			}catch(e){
+				// ignore invalid URLs
+			}
 		});
 	}
 
@@ -71,7 +76,13 @@
 
 	// Observe DOM for dynamically added anchors
 	var mo = new MutationObserver(function(muts){
-		muts.forEach(function(m){ if(m.addedNodes.length) stripHtmlExtensionInAnchors(m.target); });
+		muts.forEach(function(m){
+			if(!m.addedNodes || !m.addedNodes.length) return;
+			m.addedNodes.forEach(function(node){
+				// only element nodes can contain anchors
+				if(node.nodeType === 1) stripHtmlExtensionInAnchors(node);
+			});
+		});
 	});
 	mo.observe(document.documentElement || document.body, {childList:true, subtree:true});
 
