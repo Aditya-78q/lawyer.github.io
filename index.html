@@ -348,7 +348,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center animate-box">
-          <div class="experience-number"
+          <div id="experience-number" class="experience-number"
             style="font-size: 85px; font-weight: 800; color: #2f89fc; font-family: 'Outfit', sans-serif; line-height: 1; margin-bottom: 10px; text-shadow: 0 4px 20px rgba(47, 137, 252, 0.4);">
             6</div>
           <div class="experience-title"
@@ -364,6 +364,19 @@
           </div>
         </div>
       </div>
+
+      <script>
+        (function() {
+          // Base the experience calculation off a start year so the displayed
+          // number increments automatically each year.
+          // Initialize startYear so that currently (at time of authoring) it shows 6 years.
+          var startYear = new Date().getFullYear() - 6;
+          var now = new Date();
+          var years = now.getFullYear() - startYear;
+          var el = document.getElementById('experience-number');
+          if (el) el.textContent = years;
+        })();
+      </script>
     </div>
   </div>
 
