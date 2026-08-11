@@ -81,7 +81,12 @@
 
   <!-- Modernizr JS -->
   <script src="js/modernizr-2.6.2.min.js"></script>
-  <script src="js/page.js"></script>
+  <script>
+    if (window.location.pathname.endsWith('.html')) {
+      const cleanUrl = window.location.pathname.replace('.html', '');
+      window.location.replace(cleanUrl);
+    }
+  </script>
 
   <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
