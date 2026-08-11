@@ -23,27 +23,26 @@
 	}
 
 	// Try to fetch path + .html; if found, replace document content while keeping URL extensionless
-	function loadHtmlForPath(path){
+	async function loadHtmlForPath(path){
 		var tryUrl = path.replace(/\/$/,'') + '.html';
-		return fetch(tryUrl, {method:'GET', credentials:'same-origin'})
-			.then(function(res){
-				if(!res.ok) throw new Error('not-found');
-				return res.text();
-			});
+		var res = await fetch(tryUrl, {method:'GET', credentials:'same-origin'});
+		if(!res.ok) throw new Error('not-found');
+		return res.text();
 	}
 
 	// When user navigates (click on anchor or back/forward), handle extensionless paths
-	function handleNavigation(toPath){
-		return loadHtmlForPath(toPath).then(function(html){
+	async function handleNavigation(toPath){
+		try{
+			var html = await loadHtmlForPath(toPath);
 			// Replace document with fetched HTML while keeping extensionless URL
 			document.open();
 			document.write(html);
 			document.close();
 			// Re-run normalization on new content
 			stripHtmlExtensionInAnchors(document);
-		}).catch(function(){
+		}catch(e){
 			// nothing: let the browser handle (may be 404)
-		});
+		}
 	}
 
 	// Intercept clicks on links to handle extensionless navigation client-side
