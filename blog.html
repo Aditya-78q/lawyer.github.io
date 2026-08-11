@@ -360,6 +360,70 @@
           }
         });
       });
+
+      // Centering behavior: when expanding, make the blog-entry fixed and centered with overlay
+      function showOverlay() {
+        let ov = document.createElement('div');
+        ov.className = 'bs-overlay';
+        ov.style.position = 'fixed';
+        ov.style.top = 0;
+        ov.style.left = 0;
+        ov.style.width = '100%';
+        ov.style.height = '100%';
+        ov.style.background = 'rgba(0,0,0,0.5)';
+        ov.style.zIndex = 9998;
+        document.body.appendChild(ov);
+        return ov;
+      }
+
+      function expandEntry(blogEntry) {
+        if (!blogEntry) return;
+        // store original inline styles
+        blogEntry._origStyle = blogEntry.getAttribute('style') || '';
+        blogEntry._origParent = blogEntry.parentNode;
+        blogEntry._origNext = blogEntry.nextSibling;
+        // apply fixed centered styles
+        Object.assign(blogEntry.style, {
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '80%',
+          maxWidth: '900px',
+          zIndex: 9999,
+          height: 'auto',
+        });
+        // add overlay
+        blogEntry._overlay = showOverlay();
+      }
+
+      function collapseEntry(blogEntry) {
+        if (!blogEntry) return;
+        // restore original inline styles
+        blogEntry.setAttribute('style', blogEntry._origStyle || '');
+        // remove overlay
+        if (blogEntry._overlay && blogEntry._overlay.parentNode) {
+          blogEntry._overlay.parentNode.removeChild(blogEntry._overlay);
+        }
+        blogEntry._overlay = null;
+      }
+
+      // Hook into Read More and Cancel to expand/collapse whole box
+      const readBtns = document.querySelectorAll('.read-more-btn');
+      readBtns.forEach(r => {
+        r.addEventListener('click', function () {
+          const blogEntry = this.closest('.blog-entry');
+          expandEntry(blogEntry);
+        });
+      });
+
+      const cancels = document.querySelectorAll('.cancel-btn');
+      cancels.forEach(c => {
+        c.addEventListener('click', function () {
+          const blogEntry = this.closest('.blog-entry');
+          collapseEntry(blogEntry);
+        });
+      });
     });
   </script>
 
