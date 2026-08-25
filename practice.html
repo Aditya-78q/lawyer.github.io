@@ -246,6 +246,22 @@
                 </ul>
             </div>
         </aside>
+        <style>
+            .practice-image {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            @media (max-width: 767px) {
+                .practice-image {
+                    height: auto;
+                    aspect-ratio: 16 / 10;
+                }
+            }
+        </style>
         <div class="ftco-practice">
             <div class="container">
                 <div class="row animate-box">
@@ -296,8 +312,7 @@
 
                     <div class="col-md-4 text-center animate-box">
                         <div class="services practice-card">
-                            <img class="practice-image" src="images/criminal-law.jpg" alt="Criminal law"
-                                style="height: 200px; object-fit: cover;">
+                            <img class="practice-image" src="images/criminal-law.jpg" alt="Criminal law">
                             <div class="desc">
                                 <h3>Criminal Law</h3>
                                 <!-- ✅ Removed "Robust defense strategies", "ensuring fair trials" (outcome claim) -->
