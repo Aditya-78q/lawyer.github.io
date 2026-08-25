@@ -92,64 +92,67 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 </head>
-<nav class="ftco-nav" role="navigation">
-    <div class="top-menu">
-        <div class="container">
 
-            <div class="row">
+<body>
 
-                <div class="col-md-4">
-                    <div id="ftco-logo">
-                        <a href="index.html">Sagar Babu Bangaru</a>
+    <nav class="ftco-nav" role="navigation">
+        <div class="top-menu">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div id="ftco-logo">
+                            <a href="index.html">Sagar Babu Bangaru</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-8 text-right menu-1">
-                    <ul>
+                    <div class="col-md-8 text-right menu-1">
+                        <ul>
 
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
 
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
 
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
+                            <li>
+                                <a href="blog.html">Blog</a>
+                            </li>
 
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
-
         </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let currentPath = window.location.pathname.split("/").pop();
-            if (currentPath === "") currentPath = "index.html";
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let currentPath = window.location.pathname.split("/").pop();
+                if (currentPath === "") currentPath = "index.html";
 
-            const currentPageName = currentPath.split('.')[0];
+                const currentPageName = currentPath.split('.')[0];
 
-            const navLinks = document.querySelectorAll('.menu-1 ul li a');
-            navLinks.forEach(link => {
-                const linkHref = link.getAttribute('href');
-                const linkPageName = linkHref.split('.')[0];
+                const navLinks = document.querySelectorAll('.menu-1 ul li a');
+                navLinks.forEach(link => {
+                    const linkHref = link.getAttribute('href');
+                    const linkPageName = linkHref.split('.')[0];
 
-                if (currentPageName === linkPageName) {
-                    link.parentElement.classList.add('active');
-                }
+                    if (currentPageName === linkPageName) {
+                        link.parentElement.classList.add('active');
+                    }
+                });
             });
-        });
-    </script>
-</nav>
-<!--
+        </script>
+    </nav>
+    <!--
   ============================================================
   BCI COMPLIANCE NOTE (Rule 36 + 2008 Website Guidelines)
   ============================================================
@@ -163,7 +166,7 @@
   ============================================================
 -->
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LegalService",
@@ -205,277 +208,280 @@
     "description": "Advocate practicing at the Andhra Pradesh High Court. Areas of practice include Criminal Law, Civil Rights, and Public Interest Litigation."
   }
 </script>
-<div class="ftco-loader"></div>
+    <div class="ftco-loader"></div>
 
-<div id="page">
+    <div id="page">
 
-    <aside id="ftco-hero" class="js-fullheight">
-        <video autoplay muted loop playsinline poster="images/hero_2.jpg" id="bg-video">
-            <source src="images/dssagar.mp4" type="video/mp4">
-        </video>
-        <script>
-            var video = document.getElementById('bg-video');
-            video.play();
-            video.addEventListener('ended', function () {
-                this.currentTime = 0;
-                this.play();
-            }, false);
-        </script>
-        <div class="flexslider js-fullheight">
-            <ul class="slides">
-                <li>
-                    <div class="overlay-gradient"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
-                                <div class="slider-text-inner">
-                                    <h1><strong>Practice Areas</strong></h1>
-                                    <h2>Advocate Durga Sagar Babu Bangaru &mdash; AP High Court</h2>
+        <aside id="ftco-hero" class="js-fullheight">
+            <video autoplay muted loop playsinline poster="images/hero_2.jpg" id="bg-video">
+                <source src="images/dssagar.mp4" type="video/mp4">
+            </video>
+            <script>
+                var video = document.getElementById('bg-video');
+                video.play();
+                video.addEventListener('ended', function () {
+                    this.currentTime = 0;
+                    this.play();
+                }, false);
+            </script>
+            <div class="flexslider js-fullheight">
+                <ul class="slides">
+                    <li>
+                        <div class="overlay-gradient"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+                                    <div class="slider-text-inner">
+                                        <h1><strong>Practice Areas</strong></h1>
+                                        <h2>Advocate Durga Sagar Babu Bangaru &mdash; AP High Court</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="ftco-practice">
+            <div class="container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center ftco-heading">
+                        <h2>Areas of Practice</h2>
+                        <!-- ✅ Neutral, informational description -->
+                        <p>The following are the areas in which Advocate Durga Sagar Babu Bangaru practices
+                            at the Andhra Pradesh High Court.</p>
                     </div>
-                </li>
-            </ul>
-        </div>
-    </aside>
-    <div class="ftco-practice">
-        <div class="container">
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2 text-center ftco-heading">
-                    <h2>Areas of Practice</h2>
-                    <!-- ✅ Neutral, informational description -->
-                    <p>The following are the areas in which Advocate Durga Sagar Babu Bangaru practices
-                        at the Andhra Pradesh High Court.</p>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <span class="icon"><i class="flaticon-padlock"></i></span>
+                            <div class="desc">
+                                <h3>Civil Rights</h3>
+                                <!-- ✅ Factual description — no outcome claims -->
+                                <p>Matters relating to the fundamental rights and civil liberties of citizens, including
+                                    writ petitions and public interest litigation before the High Court.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <span class="icon"><i class="flaticon-folder"></i></span>
+                            <div class="desc">
+                                <h3>Business Law</h3>
+                                <!-- ✅ Factual, no "comprehensive support" superlatives -->
+                                <p>Matters relating to commercial disputes, contracts, and corporate compliance before
+                                    the courts of law.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <span class="icon"><i class="flaticon-act"></i></span>
+                            <div class="desc">
+                                <h3>Family Law</h3>
+                                <!-- ✅ Removed "compassionate" — self-laudatory -->
+                                <p>Matters relating to matrimonial disputes, maintenance, custody, and related family
+                                    law proceedings.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <span class="icon"><i class="flaticon-handcuffs"></i></span>
+                            <div class="desc">
+                                <h3>Criminal Law</h3>
+                                <!-- ✅ Removed "Robust defense strategies", "ensuring fair trials" (outcome claim) -->
+                                <p>Matters relating to criminal proceedings before the Andhra Pradesh High Court,
+                                    including bail applications, revisions, and appeals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <span class="icon"><i class="flaticon-libra"></i></span>
+                            <div class="desc">
+                                <h3>Public Interest Litigation</h3>
+                                <!-- ✅ Removed "impactful PILs that serve the common good" — laudatory -->
+                                <p>Filing and arguing Public Interest Litigations before the Andhra Pradesh High Court
+                                    on matters of public concern.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="row">
+        </div>
 
-                <div class="col-md-4 text-center animate-box">
-                    <div class="services">
-                        <span class="icon"><i class="flaticon-padlock"></i></span>
-                        <div class="desc">
-                            <h3>Civil Rights</h3>
-                            <!-- ✅ Factual description — no outcome claims -->
-                            <p>Matters relating to the fundamental rights and civil liberties of citizens, including
-                                writ petitions and public interest litigation before the High Court.</p>
-                        </div>
+        <!-- ✅ REMOVED: priceRange from Schema (BCI prohibits fee advertising) -->
+
+        <div class="ftco-loader"></div>
+        <footer id="ftco-footer" role="contentinfo">
+            <div class="container">
+                <div class="row row-pb-md">
+
+                    <div class="col-md-3 ftco-widget">
+                        <h4>Advocate Durga Sagar</h4>
+                        <p>
+                            Advocate enrolled with the Bar Council of Andhra Pradesh (Enrolment No. AP/705/2020).
+                            Practicing
+                            at the
+                            Andhra Pradesh High Court since November 2020.
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-md-push-1">
+                        <h4>Navigation</h4>
+
+                        <ul class="ftco-footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-md-push-1">
+                        <h4>Contact Info</h4>
+
+                        <ul class="ftco-footer-links">
+                            <li>
+                                #19-3-15, Bank Peta,
+                                <br>
+                                Police Line Street, Kakinada
+                            </li>
+                            <li>
+                                Andhra Pradesh High Court,
+                                <br>
+                                Nelapadu, Amaravati, AP
+                            </li>
+
+                            <li>
+                                <a href="tel://+918341629290">+91 8341629290</a>
+                            </li>
+
+                            <li>
+                                <a href="mailto:sagarbabu86@gmail.com">sagarbabu86@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-md-push-1">
+                        <h4>Office Hours</h4>
+                        <ul class="ftco-footer-links">
+                            <li>Mon - Fri: 10:30 AM - 5:00 PM</li>
+                            <li>Chamber: 6:00 PM - 9:00 PM</li>
+                            <li>Sat: 10:30 AM - 1:30 PM</li>
+                            <li>Sun: Closed</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="row"
+                    style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 10px; margin-bottom: 20px;">
+                    <div class="col-md-12 text-center">
+                        <p style="font-size: 12px; color: #999; line-height: 1.8; margin: 0;">
+                            <strong>Disclaimer:</strong> This website is meant solely for the purpose of providing
+                            information as per
+                            the rules of the Bar Council of India. The information provided on this website is true and
+                            correct to the
+                            best of the knowledge and belief of the advocate. This website is not intended to be a
+                            source of
+                            solicitation or advertisement. The contents of this website should not be construed as legal
+                            advice in any
+                            manner. Readers are advised to seek proper legal counsel before acting upon any information
+                            contained
+                            herein.
+                        </p>
                     </div>
                 </div>
 
-                <div class="col-md-4 text-center animate-box">
-                    <div class="services">
-                        <span class="icon"><i class="flaticon-folder"></i></span>
-                        <div class="desc">
-                            <h3>Business Law</h3>
-                            <!-- ✅ Factual, no "comprehensive support" superlatives -->
-                            <p>Matters relating to commercial disputes, contracts, and corporate compliance before
-                                the courts of law.</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="row copyright">
+                    <div class="col-md-12 text-center">
 
-                <div class="col-md-4 text-center animate-box">
-                    <div class="services">
-                        <span class="icon"><i class="flaticon-act"></i></span>
-                        <div class="desc">
-                            <h3>Family Law</h3>
-                            <!-- ✅ Removed "compassionate" — self-laudatory -->
-                            <p>Matters relating to matrimonial disputes, maintenance, custody, and related family
-                                law proceedings.</p>
-                        </div>
-                    </div>
-                </div>
+                        <p>
+                            Copyright &copy;
 
-                <div class="col-md-4 text-center animate-box">
-                    <div class="services">
-                        <span class="icon"><i class="flaticon-handcuffs"></i></span>
-                        <div class="desc">
-                            <h3>Criminal Law</h3>
-                            <!-- ✅ Removed "Robust defense strategies", "ensuring fair trials" (outcome claim) -->
-                            <p>Matters relating to criminal proceedings before the Andhra Pradesh High Court,
-                                including bail applications, revisions, and appeals.</p>
-                        </div>
-                    </div>
-                </div>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
 
-                <div class="col-md-4 text-center animate-box">
-                    <div class="services">
-                        <span class="icon"><i class="flaticon-libra"></i></span>
-                        <div class="desc">
-                            <h3>Public Interest Litigation</h3>
-                            <!-- ✅ Removed "impactful PILs that serve the common good" — laudatory -->
-                            <p>Filing and arguing Public Interest Litigations before the Andhra Pradesh High Court
-                                on matters of public concern.</p>
-                        </div>
+                            All rights reserved | This template is made with
+                            <i class="icon-heart text-danger" aria-hidden="true"></i>
+                            by Colorlib
+                            | Developed by <a href="https://tguptainfotech.com" target="_blank">Gupta Info Tech</a>
+                        </p>
+
+                        <ul class="ftco-social-icons">
+                            <li><a href="https://wa.me/918341629290" target="_blank"><i class="icon-whatsapp"></i></a>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
 
             </div>
-        </div>
+        </footer>
+
     </div>
 
-    <!-- ✅ REMOVED: priceRange from Schema (BCI prohibits fee advertising) -->
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop">
+            <i class="icon-arrow-up"></i>
+        </a>
+    </div>
 
-    <div class="ftco-loader"></div>
-    <footer id="ftco-footer" role="contentinfo">
-        <div class="container">
-            <div class="row row-pb-md">
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
 
-                <div class="col-md-3 ftco-widget">
-                    <h4>Advocate Durga Sagar</h4>
-                    <p>
-                        Advocate enrolled with the Bar Council of Andhra Pradesh (Enrolment No. AP/705/2020). Practicing
-                        at the
-                        Andhra Pradesh High Court since November 2020.
-                    </p>
-                </div>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
 
-                <div class="col-md-3 col-md-push-1">
-                    <h4>Navigation</h4>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
 
-                    <ul class="ftco-footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
 
-                <div class="col-md-3 col-md-push-1">
-                    <h4>Contact Info</h4>
+    <!-- Stellar Parallax -->
+    <script src="js/jquery.stellar.min.js"></script>
 
-                    <ul class="ftco-footer-links">
-                        <li>
-                            #19-3-15, Bank Peta,
-                            <br>
-                            Police Line Street, Kakinada
-                        </li>
-                        <li>
-                            Andhra Pradesh High Court,
-                            <br>
-                            Nelapadu, Amaravati, AP
-                        </li>
+    <!-- Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
 
-                        <li>
-                            <a href="tel://+918341629290">+91 8341629290</a>
-                        </li>
+    <!-- Flexslider -->
+    <script src="js/jquery.flexslider-min.js"></script>
 
-                        <li>
-                            <a href="mailto:sagarbabu86@gmail.com">sagarbabu86@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- countTo -->
+    <script src="js/jquery.countTo.js"></script>
 
-                <div class="col-md-3 col-md-push-1">
-                    <h4>Office Hours</h4>
-                    <ul class="ftco-footer-links">
-                        <li>Mon - Fri: 10:30 AM - 5:00 PM</li>
-                        <li>Chamber: 6:00 PM - 9:00 PM</li>
-                        <li>Sat: 10:30 AM - 1:30 PM</li>
-                        <li>Sun: Closed</li>
-                    </ul>
-                </div>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
 
-            </div>
+    <script src="js/magnific-popup-options.js"></script>
 
-            <div class="row"
-                style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 10px; margin-bottom: 20px;">
-                <div class="col-md-12 text-center">
-                    <p style="font-size: 12px; color: #999; line-height: 1.8; margin: 0;">
-                        <strong>Disclaimer:</strong> This website is meant solely for the purpose of providing
-                        information as per
-                        the rules of the Bar Council of India. The information provided on this website is true and
-                        correct to the
-                        best of the knowledge and belief of the advocate. This website is not intended to be a source of
-                        solicitation or advertisement. The contents of this website should not be construed as legal
-                        advice in any
-                        manner. Readers are advised to seek proper legal counsel before acting upon any information
-                        contained
-                        herein.
-                    </p>
-                </div>
-            </div>
+    <!-- Main -->
+    <script src="js/main.js"></script>
 
-            <div class="row copyright">
-                <div class="col-md-12 text-center">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 
-                    <p>
-                        Copyright &copy;
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-                        All rights reserved | This template is made with
-                        <i class="icon-heart text-danger" aria-hidden="true"></i>
-                        by Colorlib
-                        | Developed by <a href="https://tguptainfotech.com" target="_blank">Gupta Info Tech</a>
-                    </p>
-
-                    <ul class="ftco-social-icons">
-                        <li><a href="https://wa.me/918341629290" target="_blank"><i class="icon-whatsapp"></i></a></li>
-                    </ul>
-
-                </div>
-            </div>
-
-        </div>
-    </footer>
-
-</div>
-
-<div class="gototop js-top">
-    <a href="#" class="js-gotop">
-        <i class="icon-arrow-up"></i>
-    </a>
-</div>
-
-<!-- jQuery -->
-<script src="js/jquery.min.js"></script>
-
-<!-- jQuery Easing -->
-<script src="js/jquery.easing.1.3.js"></script>
-
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- Waypoints -->
-<script src="js/jquery.waypoints.min.js"></script>
-
-<!-- Stellar Parallax -->
-<script src="js/jquery.stellar.min.js"></script>
-
-<!-- Carousel -->
-<script src="js/owl.carousel.min.js"></script>
-
-<!-- Flexslider -->
-<script src="js/jquery.flexslider-min.js"></script>
-
-<!-- countTo -->
-<script src="js/jquery.countTo.js"></script>
-
-<!-- Magnific Popup -->
-<script src="js/jquery.magnific-popup.min.js"></script>
-
-<script src="js/magnific-popup-options.js"></script>
-
-<!-- Main -->
-<script src="js/main.js"></script>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'UA-23581568-13');
-</script>
+        gtag('js', new Date());
+        gtag('config', 'UA-23581568-13');
+    </script>
 
 </body>
 
